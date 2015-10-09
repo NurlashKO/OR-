@@ -16,10 +16,6 @@ intranet.get('http://intranet2.kbtu.kz/registraroffice/default.aspx') do |page|
     end.click_button
 end
 
-
-
-puts("-------------------LOG IN REGISTRATION OFFICE----------------------------");
-
 def fillForm(intranet, main, url)
 
     begin
@@ -43,6 +39,8 @@ def fillForm(intranet, main, url)
 
 end
 
+puts("-------------------LOG IN REGISTRATION OFFICE----------------------------");
+
 intranet.get('http://intranet2.kbtu.kz/OR2/default.aspx') do |page|
 
     form = page.form_with(:name => "__aspnetForm")
@@ -63,4 +61,14 @@ intranet.get('http://intranet2.kbtu.kz/OR2/default.aspx') do |page|
     fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl1_HLink")
     fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl2_HLink")
     fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl3_HLink")
+    fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl4_HLink")
+    fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl5_HLink")
+    fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl6_HLink")
+    fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl7_HLink")
+    fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl8_HLink")
+    fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl9_HLink")
+    fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl10_HLink")
+    fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl11_HLink")
+    fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl12_HLink")
+
 end
