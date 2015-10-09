@@ -57,7 +57,7 @@ intranet.get('http://intranet2.kbtu.kz/OR2/default.aspx') do |page|
     end.click_button
 
 
-    puts("-------------------FILL OUT THE FORMS------------------------------------")
+    puts("-------------------FILL OUT FORMS------------------------------------")
     fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl1_HLink")
     fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl2_HLink")
     fillForm(intranet, main, "_ctl0__ctl0_Questionnaires1_rptQuestionnaire__ctl3_HLink")
