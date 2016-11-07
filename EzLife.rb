@@ -1,9 +1,8 @@
 #From NurlashKO with Love<3
 require 'rubygems'
 require 'mechanize'
-
+require 'io/console'
 intranet = Mechanize.new
-
 puts("----------------------LOG IN INTRANET------------------------")
 intranet.get('http://intranet2.kbtu.kz/registraroffice/default.aspx') do |page|
 
@@ -12,8 +11,13 @@ intranet.get('http://intranet2.kbtu.kz/registraroffice/default.aspx') do |page|
     login_page = intranet.submit(form, button)
 
     main = login_page.form_with(:action => 'login.aspx?path=http://intranet2.kbtu.kz/registraroffice/default.aspx') do |f|
-        f.uname  = 'School 20'
-        f.pwd = 'Kbtu2015'
+         
+        print "ENTER YOUR ID(z_aman) : "
+        f.uname = gets.chomp
+        print "ENTER YOUR PASSWORD(NURLASHKOialreadychangedit) : "
+        f.pwd = STDIN.noecho(&:gets).chomp
+
+        print "\n"
     end.click_button
 end
 
@@ -54,7 +58,8 @@ intranet.get('http://intranet2.kbtu.kz/OR2/default.aspx') do |page|
         username_field.value = gets.chomp
         password_field = f.field_with(:id => '_ctl0__ctl0_txtPassword')
         print "ENTER YOUR PASSWORD(NURLASHKOialreadychangedit) : "
-        password_field.value = gets.chomp
+        password_field.value = STDIN.noecho(&:gets).chomp
+        print "\n"
     end.click_button
 
 
